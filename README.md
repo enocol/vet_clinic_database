@@ -36,7 +36,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 # 📖 [VET clinic] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+
 
 **[VET CLINIC]** is a database project using PostgreSQL where a database for the Vet Clinic is created called vet_clinic and in this database, an animal table is created and polulated with some sample data that is used to run a number of SQL commands to extract data.
 
@@ -44,7 +44,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -70,7 +69,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
 - **[PostgreSql installation]**
 - **[vet_clinic database created using PostgreSQL 16]**
@@ -85,7 +83,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+
 
 To get a local copy up and running, follow these steps.
 
@@ -109,7 +107,7 @@ Install PostgreSQL 16 and follow the commands found in the cloned repository as 
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+
 
 👤 **Enoh Collins**
 
@@ -121,7 +119,7 @@ Install PostgreSQL 16 and follow the commands found in the cloned repository as 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+
 
 - [ ] **Pimary Key]**
 - [ ] **[Join another table]**
@@ -141,7 +139,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
+
 
 If you like this project send me your comments on eno.col@gmail.com
 
@@ -151,7 +149,7 @@ If you like this project send me your comments on eno.col@gmail.com
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+
 
 I would like to thank my coding partners for giving me answers to some of my questions
 
