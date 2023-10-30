@@ -42,7 +42,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 > Describe your project in 1 or 2 sentences.
 
-**[VET CLINIC]** is a database project using PostgreSQL where a database for the Vet Clinic us created called vet_clinic and in this database, an animal table is created and polulated with some sample data that is used to run a number os SQL commands to extract data.
+**[VET CLINIC]** is a database project using PostgreSQL where a database for the Vet Clinic is created called vet_clinic and in this database, an animal table is created and polulated with some sample data that is used to run a number of SQL commands to extract data.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -78,7 +78,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - **[PostgreSql installation]**
 - **[vet_clinic database created using PostgreSQL 16]**
-- **[Aninal Table created]**
+- **[Animal Table created and populated with sample data]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,7 +105,7 @@ Clone this repository to your desired folder:
 
 ### Install
 
-Install PostgreSQL 16 and follow the commands found in the cloned repository
+Install PostgreSQL 16 and follow the commands found in the cloned repository as stated above.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -147,7 +147,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project send me your commengs on eno.col@gmail.com
+If you like this project send me your comments on eno.col@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
