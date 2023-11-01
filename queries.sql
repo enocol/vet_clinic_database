@@ -10,23 +10,36 @@ SELECT * FROM animals WHERE name <> 'Gabumon' ;
 SELECT * FROM animals where weight_kg >= 10.4 and weight_kg <= 17.3 ;
 
 BEGIN;
+SELECT * FROM animals;
 UPDATE animals SET species = 'unspecified';
+SELECT * from animals;
 ROLLBACK;
+SELECT * FROM animals;
 begin;
+SELECT * FROM animals WHERE name LIKE '%mon'
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+SELECT * FROM animals WHERE name LIKE '%mon'
+SELECT * FROM animals WHERE species = ''
 UPDATE animals SET species = 'pokemon' WHERE species = '';
+SELECT * FROM animals WHERE species = ''
 COMMIT;
 
 begin;
+SELECT * FROM animals;
 DELETE FROM animals;
+SELECT * from animals;
 ROLLBACK;
+SELECT * FROM animals;
 
 begin DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 savepoint after_jan_2022;
 UPDATE animals SET weight_kg = weight_kg * -1;
+SELECT * FROM animals WHERE weight_kg < 0;
 rollback to savepoint after_jan_2022;
+SELECT * FROM animals WHERE date_of_birth > '2022-01-01'
 begin;
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+SELECT * from animals WHERE weight_kg < 0;
 COMMIT;
 
 SELECT COUNT(*) FROM animals;
