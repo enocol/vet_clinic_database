@@ -10,11 +10,11 @@ SELECT * FROM animals WHERE name <> 'Gabumon' ;
 SELECT * FROM animals where weight_kg >= 10.4 and weight_kg <= 17.3 ;
 
 BEGIN;
-SELECT * FROM animals;
+SELECT species FROM animals;
 UPDATE animals SET species = 'unspecified';
-SELECT * from animals;
+SELECT species from animals;
 ROLLBACK;
-SELECT * FROM animals;
+SELECT species FROM animals;
 begin;
 SELECT * FROM animals WHERE name LIKE '%mon'
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
