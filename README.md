@@ -73,6 +73,8 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - **[PostgreSql installation]**
 - **[vet_clinic database created using PostgreSQL 16]**
 - **[Animal Table created and populated with sample data]**
+- **[Query and updata data in Animal table including deleting data]**
+- **[Query updata and delete data in Animal table that meet a specific criteria]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
