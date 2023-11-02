@@ -48,3 +48,8 @@ SELECT AVG(weight_kg) FROM animals;
 SELECT neutered, SUM(escape_attempts) as total_escape_attempts FROM animals GROUP BY neutered ORDER BY total_escape_attempts DESC;
 SELECT species, MIN(weight_kg) AS min_weight, MAX(weight_kg) AS max_weight FROM animals GROUP BY species;
 SELECT species, AVG(escape_attempts) AS avg_escape_attempts FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
+
+SELECT a.name AS Animals_of_Melody_Pong FROM animals AS a JOIN owners AS o ON a.owner_id = o.id WHERE o.full_name = 'Melody Pond';
+SELECT a.name AS Animal_of_type_Pokemon FROM animals AS a JOIN species AS s ON a.species_id = s.id WHERE s.name = 'Pokemon';
+SELECT o.full_name AS name_of_owner, a.name AS Name_of_animal FROM owners AS o LEFT JOIN animals AS a ON o.id = a.owner_id ORDER BY o.full_name;
+SELECT s.name AS Name_of_species, COUNT(a.id) AS Number_of_animals FROM species AS s LEFT JOIN animals AS a ON s.id = a.species_id GROUP BY s.name ORDER BY s.name;
