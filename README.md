@@ -74,7 +74,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - **[vet_clinic database created using PostgreSQL 16]**
 - **[Animal Table created and populated with sample data]**
 - **[Query and updata data in Animal table including deleting data]**
-- **[Query updata and delete data in Animal table that meet a specific criteria]**
+- **[Using multiple takes including primary keys and foreign keys]**
+- **[Using foreign key to create a one-to-many relationship]**
+- **[Using JOIN to query multiple tables]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,8 +125,8 @@ Install PostgreSQL 16 and follow the commands found in the cloned repository as 
 
 
 
-- [ ] **Pimary Key]**
-- [ ] **[Join another table]**
+- [ ] **Join Table for visits]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
