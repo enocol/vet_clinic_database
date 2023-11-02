@@ -17,6 +17,10 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 
 INSERT INTO OWNERS (full_name, age) VALUES ('Sam Smith', 34), ('Jennifer Orwell', 19), ('Bob', 45), ('Melody Pond', 77), ('Dean Winchester', 14), ('Jodie Whittaker', 38);
 INSERT INTO SPECIES (name) VALUES ('Digimon), ('Pokemon');
+
+UPDATE ANIMALS SET species_id = 1 WHERE name LIKE '%mon';
+UPDATE ANIMALS SET species_id = 2 WHERE species_id IS NULL;
+  
 UPDATE ANIMALS SET owner_id = (SELECT id FROM owners WHERE full_name = 'Sam Smith') WHERE name = 'Agumon';
 UPDATE ANIMALS SET owner_id = (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell') WHERE name = 'Gabumon' OR name = 'Pikachu';
 UPDATE ANIMALS SET owner_id = (SELECT id FROM owners WHERE full_name = 'Bob') WHERE name = 'Plantmon' OR name = 'Devimom';
