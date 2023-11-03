@@ -94,14 +94,13 @@ ORDER BY Number_of_visits DESC
 LIMIT 1;
 
 
-SELECT a.name AS Most_visited_animal, COUNT(*) AS number_of_visits
-FROM visits v
-JOIN vet m ON v.vet_id = m.id
-JOIN animals a ON v.animal_id = a.id
-WHERE m.name = 'Maisy Smith'
-GROUP BY a.name
-ORDER BY number_of_visits DESC
-LIMIT 1;
+SELECT animals.name, visits.date_of_visit
+  FROM visits
+  LEFT JOIN animals ON animals.id = visits.animal_id
+  LEFT JOIN vet ON vet.id = visits.vet_id
+  WHERE vet.name = 'Maisy Smith'
+  ORDER BY visits.date_of_visit ASC
+  LIMIT 1;
 
 SELECT a.name AS animal_name, v.name AS vet_name, vst.date_of_visit AS most_recent_visit_date
 FROM visits vst
