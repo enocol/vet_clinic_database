@@ -77,6 +77,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - **[Using multiple takes including primary keys and foreign keys]**
 - **[Using foreign key to create a one-to-many relationship]**
 - **[Using JOIN to query multiple tables]**
+- **[Using middle table for many-to-many relationship]**
+- **[Running Queries for a many-to-many relationships]**
+  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
