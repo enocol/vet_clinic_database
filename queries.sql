@@ -70,3 +70,18 @@ SELECT COUNT(DISTINCT v.animal_id) AS total_animals_seen_by_Stephanie_Mendez
 FROM visits v
 JOIN vet s ON v.vet_id = s.id
 WHERE s.name = 'Stephanie Mendez'
+
+SELECT v.name AS vet_name, COALESCE(string_agg(s.name, ', '), 'No specialty') AS specialties
+FROM vet v
+LEFT JOIN specializations vs ON v.id = vs.vet_id
+LEFT JOIN species s ON vs.species_id = s.id
+GROUP BY v.name
+ORDER BY v.name;
+
+
+SELECT DISTINCT a.name AS visited_Stephanie_btw_April_And_1st_August_30th_2020
+FROM visits v
+JOIN vet s ON v.vet_id = s.id
+JOIN animals a ON v.animal_id = a.id
+WHERE s.name = 'Stephanie Mendez'
+AND v.date_of_visit >= '2020-04-01' AND v.date_of_visit <= '2020-08-30';
