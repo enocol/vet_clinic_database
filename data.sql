@@ -29,6 +29,13 @@ UPDATE ANIMALS SET owner_id = (SELECT id FROM owners WHERE full_name = 'Dean Win
 
 INSERT INTO VET (name, age, date_of_graduation) VALUES ('William Tatcher', 45, '2000-04-23'),('Maisy Smith', 26, '2019-01-17'),('Stephanie Mendez', 64, '1981-05-04'),('Jack Harkness',  38, '2008-06-08');
 
+INSERT INTO specializations (vet_id, species_id)
+VALUES
+    ((SELECT id FROM vet WHERE name = 'William Tatcher'), (SELECT id FROM species WHERE name = 'Pokemon')),
+    ((SELECT id FROM vet WHERE name = 'Stephanie Mendez'), (SELECT id FROM species WHERE name = 'Digimon')),
+    ((SELECT id FROM vet WHERE name = 'Stephanie Mendez'), (SELECT id FROM species WHERE name = 'Pokemon')),
+    ((SELECT id FROM vet WHERE name = 'Jack Harkness'), (SELECT id FROM species WHERE name = 'Digimon'));
+  
 INSERT INTO visits (vet_id, animal_id, date_of_visit) VALUES ((SELECT id FROM vet WHERE name = 'William Tatcher'),(SELECT id FROM animals WHERE name = 'Agumon'), '2020-05-24');
 INSERT INTO visits (vet_id, animal_id, date_of_visit)
 VALUES
