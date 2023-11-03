@@ -55,3 +55,18 @@ SELECT o.full_name AS name_of_owner, a.name AS Name_of_animal FROM owners AS o L
 SELECT s.name AS Name_of_species, COUNT(a.id) AS Number_of_animals FROM species AS s LEFT JOIN animals AS a ON s.id = a.species_id GROUP BY s.name ORDER BY s.name;
 SELECT a.name AS animal_name FROM owners AS o JOIN animals AS a ON o.id = a.owner_id WHERE o.full_name = 'Dean Winchester' AND a.escape_attempts = 0;
 SELECT o.full_name AS owner_name, COUNT(a.id) AS num_animals_owned FROM owners AS o LEFT JOIN animals AS a ON o.id = a.owner_id GROUP BY o.full_name ORDER BY num_animals_owned DESC LIMIT 1;
+
+
+
+SELECT a.name AS last_animal_seen_by_William_Tatche
+FROM visits v
+JOIN vet w ON v.vet_id = w.id
+JOIN animals a ON v.animal_id = a.id
+WHERE w.name = 'William Tatcher'
+ORDER BY v.date_of_visit DESC
+LIMIT 1;
+
+SELECT COUNT(DISTINCT v.animal_id) AS total_animals_seen_by_Stephanie_Mendez
+FROM visits v
+JOIN vet s ON v.vet_id = s.id
+WHERE s.name = 'Stephanie Mendez'
