@@ -18,8 +18,6 @@ ALTER TABLE ANIMALS ADD COLUMN owner_id INT REFERENCES owners(id);
 
 CREATE TABLE vet (id SERIAL PRIMARY KEY, name VARCHAR(255), age INT, date_of_graduation DATE);
 CREATE TABLE specializations (vet_id INT REFERENCES vet(id), species_id INT REFERENCES species(id), PRIMARY KEY (vet_id, species_id));
-CREATE TABLE visits (vet_id INT REFERENCES vet(id), animal_id INT REFERENCES animals(id), PRIMARY KEY (vet_id, animal_id));
-ALTER TABLE visits ADD COLUMN date_of_visit date;
-
+CREATE TABLE visits (visit_id SERIAL PRIMARY KEY, vet_id INT REFERENCES vet(id), animal_id INT REFERENCES animals(id), date_of_visit date);
 
 
