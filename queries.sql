@@ -85,3 +85,44 @@ JOIN vet s ON v.vet_id = s.id
 JOIN animals a ON v.animal_id = a.id
 WHERE s.name = 'Stephanie Mendez'
 AND v.date_of_visit >= '2020-04-01' AND v.date_of_visit <= '2020-08-30';
+
+SELECT a.name AS animal_with_most_visit, COUNT(*) AS Number_of_visits
+FROM visits v
+JOIN animals a ON v.animal_id = a.id
+GROUP BY a.name
+ORDER BY Number_of_visits DESC
+LIMIT 1;
+
+
+SELECT a.name AS Most_visited_animal, COUNT(*) AS number_of_visits
+FROM visits v
+JOIN vet m ON v.vet_id = m.id
+JOIN animals a ON v.animal_id = a.id
+WHERE m.name = 'Maisy Smith'
+GROUP BY a.name
+ORDER BY number_of_visits DESC
+LIMIT 1;
+
+SELECT a.name AS animal_name, v.name AS vet_name, vst.date_of_visit AS most_recent_visit_date
+FROM visits vst
+JOIN vet v ON vst.vet_id = v.id
+JOIN animals a ON vst.animal_id = a.id
+ORDER BY vst.date_of_visit DESC
+LIMIT 1;
+
+SELECT COUNT(*) AS visits_by_unspecialized_vet
+FROM visits v
+JOIN vet ve ON v.vet_id = ve.id
+JOIN animals a ON v.animal_id = a.id
+LEFT JOIN specializations s ON ve.id = s.vet_id AND a.species_id = s.species_id
+WHERE s.vet_id IS NULL;
+
+SELECT a.species_id, s.name AS species_Maisy_Smith_should_consider, COUNT(*) AS species_She_gets_most
+FROM visits v
+JOIN vet m ON v.vet_id = m.id
+JOIN animals a ON v.animal_id = a.id
+JOIN species s ON a.species_id = s.id
+WHERE m.name = 'Maisy Smith'
+GROUP BY a.species_id, s.name
+ORDER BY species_She_gets_most DESC
+LIMIT 1;
