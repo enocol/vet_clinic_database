@@ -20,4 +20,8 @@ CREATE TABLE vet (id SERIAL PRIMARY KEY, name VARCHAR(255), age INT, date_of_gra
 CREATE TABLE specializations (vet_id INT REFERENCES vet(id), species_id INT REFERENCES species(id), PRIMARY KEY (vet_id, species_id));
 CREATE TABLE visits (visit_id SERIAL PRIMARY KEY, vet_id INT REFERENCES vet(id), animal_id INT REFERENCES animals(id), date_of_visit date);
 
+CREATE INDEX idx_animal_id ON visits (animal_id);
+CREATE INDEX idx_vet_id ON visits (vet_id);
+CREATE INDEX idx_email ON owners (email);
+
 

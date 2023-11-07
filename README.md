@@ -122,6 +122,10 @@ Install PostgreSQL 16 and follow the commands found in the cloned repository as 
 - Twitter: [@twitterhandle](https://twitter.com/enocol)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/enocol/)
 
+👤 **Sami Ullah Tufail**
+
+- GitHub: [@githubhandle](https://github.com/Sami-Ullah-Tufail)
+
 
 
 ## 🔭 Future Features <a name="future-features"></a>
