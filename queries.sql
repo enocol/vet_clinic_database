@@ -25,7 +25,7 @@ SELECT * FROM animals WHERE species = ''
 COMMIT;
 
 begin;
-SELECT * FROM animals;
+SELECT * FROM animals ;
 DELETE FROM animals;
 SELECT * from animals;
 ROLLBACK;
