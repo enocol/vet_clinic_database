@@ -116,3 +116,12 @@ JOIN animals a ON v.animal_id = a.id
 LEFT JOIN specializations s ON ve.id = s.vet_id AND a.species_id = s.species_id
 WHERE s.vet_id IS NULL;
 
+SELECT a.species_id, s.name AS species_Maisy_Smith_should_consider, COUNT(*) AS species_She_gets_most
+FROM visits v
+JOIN vet m ON v.vet_id = m.id
+JOIN animals a ON v.animal_id = a.id
+JOIN species s ON a.species_id = s.id
+WHERE m.name = 'Maisy Smith'
+GROUP BY a.species_id, s.name
+ORDER BY species_She_gets_most DESC
+LIMIT 1;
